@@ -1,0 +1,28 @@
+en
+conf t
+enable password cisco
+enable secret ccna
+service password-encryption
+vlan 10
+name v10
+ex
+vlan 20
+name v20
+ex
+vlan 30
+name v30
+int r fa0/1-8
+sw mode acc
+sw acc vlan 10
+ex
+int r fa0/9-16
+sw mode acc
+sw acc vlan 20
+ex
+int r fa0/17-24
+sw mode acc
+sw acc vlan 30
+ex
+int r gi0/1-2
+sw mode trunk
+ex
